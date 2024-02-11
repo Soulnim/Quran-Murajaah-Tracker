@@ -1,0 +1,31 @@
+body {
+ margin: 0;
+ padding: 0;
+}
+
+#navbar {
+ background-color: red;
+ height: 100px;
+ width: 100%;
+}
+
+#dashboard {
+ background-color: purple;
+ height: 100px;
+ width: 100%;
+}
+
+#pillNav2 {
+ max-width: 500px;
+ margin: auto;
+}
+
+#datalist {
+ background-color: green;
+ text-align: center;
+}
+
+#footer {
+ background-color: blue;
+ height: 100px;
+}
