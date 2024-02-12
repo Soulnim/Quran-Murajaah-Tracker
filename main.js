@@ -159,11 +159,11 @@ function displayJuzu() {
     text = "<ul class=\"list-group\">";
     for (let juz in juzList) {
       if (juzList[juz] == 1) {
-        text += "<li class=\"list-group-item list-group-item-success\">" + juz + '  ' +
-          '<input checked onchange="checkJuz(\'' + juz.replace("'", "\\'") + '\')" type="checkbox"></input></li>';
+        text += "<li class=\"list-group-item list-group-item-success\">" + '  ' +
+          '<button class=\"select-button\" checked onclick="checkJuz(\'' + juz.replace("'", "\\'") + '\')">' + juz + '</button></li>';
       } else {
-        text += "<li class=\"list-group-item list-group-item-secondary\">" + juz + '  ' +
-          '<input onchange="checkJuz(\'' + juz.replace("'", "\\'") + '\')" type="checkbox"></input></li>';
+        text += "<li class=\"list-group-item list-group-item-secondary\">" + '  ' +
+          '<button class=\"select-button\" onclick="checkJuz(\'' + juz.replace("'", "\\'") + '\')">' + juz + '</button></li>';
       }
     }
     text += "</ul>";
@@ -174,27 +174,26 @@ function displayJuzu() {
     for (let juz in juzList) {
       if (counter % 4 != 0) {
         if (juzList[juz] == 1) {
-          text += "<div class=\"col rounded text-white bg-success\">" + juz + '  ' +
-            '<input checked onchange="checkJuz(\'' + juz.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
+          text += "<div class=\"col rounded bg-success\">" + '  ' +
+            '<button class=\"select-button text-white\" checked onclick="checkJuz(\'' + juz.replace("'", "\\'") + '\')">' + juz + '</button>' + "</div >";
         }
         else {
-          text += "<div class=\"col rounded bg-light\">" + juz + '  ' +
-            '<input onchange="checkJuz(\'' + juz.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
+          text += "<div class=\"col rounded bg-light\">" + '  ' +
+            '<button class=\"select-button\" onclick="checkJuz(\'' + juz.replace("'", "\\'") + '\')">' + juz + '</button>' + "</div >";
         }
 
       }
       else {
         if (juzList[juz] == 1) {
-          text += "<div class=\"col rounded text-white bg-success\">" + juz + '  ' +
-            '<input checked onchange="checkJuz(\'' + juz.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
+          text += "<div class=\"col rounded bg-success\">" + '  ' +
+            '<button class=\"select-button text-white\" checked onclick="checkJuz(\'' + juz.replace("'", "\\'") + '\')">' + juz + '</button>' + "</div ></div >" +
             "<div class=\"row\">";
         }
         else {
-          text += "<div class=\"col rounded bg-light\">" + juz + '  ' +
-            '<input onchange="checkJuz(\'' + juz.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
+          text += "<div class=\"col rounded bg-light\">" + '  ' +
+            '<button class=\"select-button\" onclick="checkJuz(\'' + juz.replace("'", "\\'") + '\')">' + juz + '</button>' + "</div ></div >" +
             "<div class=\"row\">";
         }
-
       }
       counter++;
     }
@@ -228,11 +227,11 @@ function displaySurah() {
     text = "<ul class=\"list-group\">";
     for (let surah in surahList) {
       if (surahList[surah] == 1) {
-        text += "<li class=\"list-group-item list-group-item-success\">" + surah + '  ' +
-          '<input checked onchange="checkSurah(\'' + surah.replace("'", "\\'") + '\')" type="checkbox"></input></li>';
+        text += "<li class=\"list-group-item list-group-item-success\">" + '  ' +
+          '<button class=\"select-button\" checked onclick="checkSurah(\'' + surah.replace("'", "\\'") + '\')">' + surah + '</button></li>';
       } else {
-        text += "<li class=\"list-group-item list-group-item-secondary\">" + surah + '  ' +
-          '<input onchange="checkSurah(\'' + surah.replace("'", "\\'") + '\')" type="checkbox"></input></li>';
+        text += "<li class=\"list-group-item list-group-item-secondary\">" + '  ' +
+          '<button class=\"select-button\" onclick="checkSurah(\'' + surah.replace("'", "\\'") + '\')">' + surah + '</button></li>';
       }
     }
     text += "</ul>";
@@ -243,27 +242,26 @@ function displaySurah() {
     for (let surah in surahList) {
       if (counter % 4 != 0) {
         if (surahList[surah] == 1) {
-          text += "<div class=\"col rounded text-white bg-success\">" + surah + '  ' +
-            '<input checked onchange="checkSurah(\'' + surah.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
+          text += "<div class=\"col rounded bg-success\">" + '  ' +
+            '<button class=\"select-button text-white\" checked onclick="checkSurah(\'' + surah.replace("'", "\\'") + '\')">' + surah + '</button>' + "</div >";
         }
         else {
-          text += "<div class=\"col rounded bg-light\">" + surah + '  ' +
-            '<input onchange="checkSurah(\'' + surah.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
+          text += "<div class=\"col rounded bg-light\">" + '  ' +
+            '<button class=\"select-button\" onclick="checkSurah(\'' + surah.replace("'", "\\'") + '\')">' + surah + '</button>' + "</div >";
         }
 
       }
       else {
         if (surahList[surah] == 1) {
-          text += "<div class=\"col rounded text-white bg-success\">" + surah + '  ' +
-            '<input checked onchange="checkSurah(\'' + surah.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
+          text += "<div class=\"col rounded bg-success\">" + '  ' +
+            '<button class=\"select-button text-white\" checked onclick="checkSurah(\'' + surah.replace("'", "\\'") + '\')">' + surah + '</button>' + "</div ></div >" +
             "<div class=\"row\">";
         }
         else {
-          text += "<div class=\"col rounded bg-light\">" + surah + '  ' +
-            '<input onchange="checkSurah(\'' + surah.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
+          text += "<div class=\"col rounded bg-light\">" + '  ' +
+            '<button class=\"select-button\" onclick="checkSurah(\'' + surah.replace("'", "\\'") + '\')">' + surah + '</button>' + "</div ></div >" +
             "<div class=\"row\">";
         }
-
       }
       counter++;
     }
@@ -297,11 +295,11 @@ function displayMaqra() {
     text = "<ul class=\"list-group\">";
     for (let maqra in maqraList) {
       if (maqraList[maqra] == 1) {
-        text += "<li class=\"list-group-item list-group-item-success\">" + maqra + '  ' +
-          '<input checked onchange="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')" type="checkbox"></input></li>';
+        text += "<li class=\"list-group-item list-group-item-success\">" + '  ' +
+          '<button class=\"select-button\" checked onclick="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')">' + maqra + '</button></li>';
       } else {
-        text += "<li class=\"list-group-item list-group-item-secondary\">" + maqra + '  ' +
-          '<input onchange="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')" type="checkbox"></input></li>';
+        text += "<li class=\"list-group-item list-group-item-secondary\">" + '  ' +
+          '<button class=\"select-button\" onclick="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')">' + maqra + '</button></li>';
       }
     }
     text += "</ul>";
@@ -312,27 +310,26 @@ function displayMaqra() {
     for (let maqra in maqraList) {
       if (counter % 4 != 0) {
         if (maqraList[maqra] == 1) {
-          text += "<div class=\"col rounded text-white bg-success\">" + maqra + '  ' +
-            '<input checked onchange="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
+          text += "<div class=\"col rounded bg-success\">" + '  ' +
+            '<button class=\"select-button text-white\" checked onclick="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')">' + maqra + '</button>' + "</div >";
         }
         else {
-          text += "<div class=\"col rounded bg-light\">" + maqra + '  ' +
-            '<input onchange="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
+          text += "<div class=\"col rounded bg-light\">" + '  ' +
+            '<button class=\"select-button\" onclick="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')">' + maqra + '</button>' + "</div >";
         }
 
       }
       else {
         if (maqraList[maqra] == 1) {
-          text += "<div class=\"col rounded text-white bg-success\">" + maqra + '  ' +
-            '<input checked onchange="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
+          text += "<div class=\"col rounded bg-success\">" + '  ' +
+            '<button class=\"select-button text-white\" checked onclick="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')">' + maqra + '</button>' + "</div ></div >" +
             "<div class=\"row\">";
         }
         else {
-          text += "<div class=\"col rounded bg-light\">" + maqra + '  ' +
-            '<input onchange="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
+          text += "<div class=\"col rounded bg-light\">" + '  ' +
+            '<button class=\"select-button\" onclick="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')">' + maqra + '</button>' + "</div ></div >" +
             "<div class=\"row\">";
         }
-
       }
       counter++;
     }
@@ -366,11 +363,11 @@ function displayPage() {
     text = "<ul class=\"list-group\">";
     for (let page in pageList) {
       if (pageList[page] == 1) {
-        text += "<li class=\"list-group-item list-group-item-success\">" + page + '  ' +
-          '<input checked onchange="checkPage(\'' + page.replace("'", "\\'") + '\')" type="checkbox"></input></li>';
+        text += "<li class=\"list-group-item list-group-item-success\">" + '  ' +
+          '<button class=\"select-button\" checked onclick="checkPage(\'' + page.replace("'", "\\'") + '\')">' + page + '</button></li>';
       } else {
-        text += "<li class=\"list-group-item list-group-item-secondary\">" + page + '  ' +
-          '<input onchange="checkPage(\'' + page.replace("'", "\\'") + '\')" type="checkbox"></input></li>';
+        text += "<li class=\"list-group-item list-group-item-secondary\">" + '  ' +
+          '<button class=\"select-button\" onclick="checkPage(\'' + page.replace("'", "\\'") + '\')">' + page + '</button></li>';
       }
     }
     text += "</ul>";
@@ -381,27 +378,26 @@ function displayPage() {
     for (let page in pageList) {
       if (counter % 4 != 0) {
         if (pageList[page] == 1) {
-          text += "<div class=\"col rounded text-white bg-success\">" + page + '  ' +
-            '<input checked onchange="checkPage(\'' + page.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
+          text += "<div class=\"col rounded bg-success\">" + '  ' +
+            '<button class=\"select-button text-white\" checked onclick="checkPage(\'' + page.replace("'", "\\'") + '\')">' + page + '</button>' + "</div >";
         }
         else {
-          text += "<div class=\"col rounded bg-light\">" + page + '  ' +
-            '<input onchange="checkPage(\'' + page.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
+          text += "<div class=\"col rounded bg-light\">" + '  ' +
+            '<button class=\"select-button\" onclick="checkPage(\'' + page.replace("'", "\\'") + '\')">' + page + '</button>' + "</div >";
         }
 
       }
       else {
         if (pageList[page] == 1) {
-          text += "<div class=\"col rounded text-white bg-success\">" + page + '  ' +
-            '<input checked onchange="checkPage(\'' + page.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
+          text += "<div class=\"col rounded bg-success\">" + '  ' +
+            '<button class=\"select-button text-white\" checked onclick="checkPage(\'' + page.replace("'", "\\'") + '\')">' + page + '</button>' + "</div ></div >" +
             "<div class=\"row\">";
         }
         else {
-          text += "<div class=\"col rounded bg-light\">" + page + '  ' +
-            '<input onchange="checkPage(\'' + page.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
+          text += "<div class=\"col rounded bg-light\">" + '  ' +
+            '<button class=\"select-button\" onclick="checkPage(\'' + page.replace("'", "\\'") + '\')">' + page + '</button>' + "</div ></div >" +
             "<div class=\"row\">";
         }
-
       }
       counter++;
     }
