@@ -149,6 +149,7 @@ let isDisplayJuz = true;
 let isDisplaySurah = false;
 let isDisplayMaqra = false;
 let isDisplayPage = false;
+let displayDefault = true;
 
 //======================== Juzu'
 
@@ -173,23 +174,23 @@ function displayJuzu() {
     for (let juz in juzList) {
       if (counter % 4 != 0) {
         if (juzList[juz] == 1) {
-          text += "<div class=\"col bg-success\">" + juz + '  ' +
+          text += "<div class=\"col rounded text-white bg-success\">" + juz + '  ' +
             '<input checked onchange="checkJuz(\'' + juz.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
         }
         else {
-          text += "<div class=\"col\">" + juz + '  ' +
+          text += "<div class=\"col rounded bg-light\">" + juz + '  ' +
             '<input onchange="checkJuz(\'' + juz.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
         }
 
       }
       else {
         if (juzList[juz] == 1) {
-          text += "<div class=\"col bg-success\">" + juz + '  ' +
+          text += "<div class=\"col rounded text-white bg-success\">" + juz + '  ' +
             '<input checked onchange="checkJuz(\'' + juz.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
             "<div class=\"row\">";
         }
         else {
-          text += "<div class=\"col\">" + juz + '  ' +
+          text += "<div class=\"col rounded bg-light\">" + juz + '  ' +
             '<input onchange="checkJuz(\'' + juz.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
             "<div class=\"row\">";
         }
@@ -242,23 +243,23 @@ function displaySurah() {
     for (let surah in surahList) {
       if (counter % 4 != 0) {
         if (surahList[surah] == 1) {
-          text += "<div class=\"col bg-success\">" + surah + '  ' +
+          text += "<div class=\"col rounded text-white bg-success\">" + surah + '  ' +
             '<input checked onchange="checkSurah(\'' + surah.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
         }
         else {
-          text += "<div class=\"col\">" + surah + '  ' +
+          text += "<div class=\"col rounded bg-light\">" + surah + '  ' +
             '<input onchange="checkSurah(\'' + surah.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
         }
 
       }
       else {
         if (surahList[surah] == 1) {
-          text += "<div class=\"col bg-success\">" + surah + '  ' +
+          text += "<div class=\"col rounded text-white bg-success\">" + surah + '  ' +
             '<input checked onchange="checkSurah(\'' + surah.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
             "<div class=\"row\">";
         }
         else {
-          text += "<div class=\"col\">" + surah + '  ' +
+          text += "<div class=\"col rounded bg-light\">" + surah + '  ' +
             '<input onchange="checkSurah(\'' + surah.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
             "<div class=\"row\">";
         }
@@ -311,23 +312,23 @@ function displayMaqra() {
     for (let maqra in maqraList) {
       if (counter % 4 != 0) {
         if (maqraList[maqra] == 1) {
-          text += "<div class=\"col bg-success\">" + maqra + '  ' +
+          text += "<div class=\"col rounded text-white bg-success\">" + maqra + '  ' +
             '<input checked onchange="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
         }
         else {
-          text += "<div class=\"col\">" + maqra + '  ' +
+          text += "<div class=\"col rounded bg-light\">" + maqra + '  ' +
             '<input onchange="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
         }
 
       }
       else {
         if (maqraList[maqra] == 1) {
-          text += "<div class=\"col bg-success\">" + maqra + '  ' +
+          text += "<div class=\"col rounded text-white bg-success\">" + maqra + '  ' +
             '<input checked onchange="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
             "<div class=\"row\">";
         }
         else {
-          text += "<div class=\"col\">" + maqra + '  ' +
+          text += "<div class=\"col rounded bg-light\">" + maqra + '  ' +
             '<input onchange="checkMaqra(\'' + maqra.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
             "<div class=\"row\">";
         }
@@ -380,23 +381,23 @@ function displayPage() {
     for (let page in pageList) {
       if (counter % 4 != 0) {
         if (pageList[page] == 1) {
-          text += "<div class=\"col bg-success\">" + page + '  ' +
+          text += "<div class=\"col rounded text-white bg-success\">" + page + '  ' +
             '<input checked onchange="checkPage(\'' + page.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
         }
         else {
-          text += "<div class=\"col\">" + page + '  ' +
+          text += "<div class=\"col rounded bg-light\">" + page + '  ' +
             '<input onchange="checkPage(\'' + page.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div >";
         }
 
       }
       else {
         if (pageList[page] == 1) {
-          text += "<div class=\"col bg-success\">" + page + '  ' +
+          text += "<div class=\"col rounded text-white bg-success\">" + page + '  ' +
             '<input checked onchange="checkPage(\'' + page.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
             "<div class=\"row\">";
         }
         else {
-          text += "<div class=\"col\">" + page + '  ' +
+          text += "<div class=\"col rounded bg-light\">" + page + '  ' +
             '<input onchange="checkPage(\'' + page.replace("'", "\\'") + '\')" type="checkbox"></input>' + "</div ></div >" +
             "<div class=\"row\">";
         }
@@ -430,8 +431,10 @@ function checkPage(pageName) {
 function changeView() {
   if (isListView) {
     isListView = false;
+    document.getElementById("gridview2").innerHTML = "<i class=\"fa fa-th\"></i>";
   } else {
     isListView = true;
+    document.getElementById("gridview2").innerHTML = "<i class=\"fa fa-list\"></i>";
   }
   if (isDisplayJuz) {
     displayJuzu();
@@ -441,5 +444,12 @@ function changeView() {
     displayMaqra();
   } else {
     displayPage();
+  }
+}
+
+function displayFirst() {
+  if (displayDefault) {
+    displayJuzu();
+    displayDefault = false;
   }
 }
