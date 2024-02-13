@@ -33,8 +33,32 @@ li {
 #content {
  padding-top: 20px;
  padding-bottom: 20px;
- margin-left: 80px;
- margin-right: 80px;
+ margin: auto;
+ max-width: 600px;
+}
+
+@media only screen and (max-width: 700px) {
+ #content {
+  max-width: 550px;
+ }
+}
+
+@media only screen and (max-width: 600px) {
+ #content {
+  max-width: 450px;
+ }
+}
+
+@media only screen and (max-width: 500px) {
+ #content {
+  max-width: 350px;
+ }
+}
+
+@media only screen and (max-width: 400px) {
+ #content {
+  max-width: 250px;
+ }
 }
 
 .col {
