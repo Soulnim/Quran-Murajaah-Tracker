@@ -8,6 +8,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
@@ -15,17 +24,47 @@
   <title>Quran Murajaah Tracker</title>
 </head>
 
-<body onload="loadData(), displayJuzu()">
-  <section id="navbar">
-    <nav class="navbar navbar-light bg-">
-      <form class="form-inline">
-        <button class="btn btn-outline-primary" type="button">Home</button>
-        <button class="btn btn-outline-secondary disabled" type="button">Goals</button>
-        <button class="btn btn-outline-secondary disabled" type="button">Test</button>
-      </form>
+<body onload="loadData(), getProgress(), displayJuzu()">
+  <section id="navbar-section">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" style="font-weight: bold;" href="#">Quran
+        Murajaah
+        Tracker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link disabled" href="#">Goals</a>
+          <a class="nav-item nav-link active" href="#">About</a>
+        </div>
+      </div>
     </nav>
   </section>
-  <section id="dashboard"></section>
+  <section id="dashboard">
+    <div class="container">
+      <div class="row">
+        <div class="progress-data col">
+          <section id="juzprogress"></section>
+          <h3>Juzu'</h3>
+        </div>
+        <div class="progress-data col">
+          <section id="surahprogress"></section>
+          <h3>Surah</h3>
+        </div>
+        <div class="progress-data col">
+          <section id="maqraprogress"></section>
+          <h3>Maqra</h3>
+        </div>
+        <div class="progress-data col">
+          <section id="pageprogress"></section>
+          <h3>Page</h3>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="content">
     <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist"
       style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
@@ -47,13 +86,23 @@
       </li>
     </ul>
     <section id="viewtype">
-      <button id="gridview" class="btn btn-info" onclick="changeView()" class="dataview">Change View</button>
+      <button id="gridview" class="btn btn-warning" onclick="changeView()" class="dataview">Change View</button>
       <button id="gridview2" class="btn btn-secondary disabled" class="dataview"><i class="fa fa-list"></i></button>
     </section>
     <section id="datalist">
     </section>
   </section>
-  <section id="footer"></section>
+  <section id="footer">
+    <footer class="bg-body-tertiary text-center">
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright :
+        <a class="text-body" style="color: black; text-decoration: none;">Luqman Khailmi</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </section>
 </body>
 
 </html>
