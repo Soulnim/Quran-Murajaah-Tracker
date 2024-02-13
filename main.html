@@ -15,9 +15,15 @@
   <title>Quran Murajaah Tracker</title>
 </head>
 
-<body onload="displayJuzu()">
+<body onload="loadData(), displayJuzu()">
   <section id="navbar">
-
+    <nav class="navbar navbar-light bg-">
+      <form class="form-inline">
+        <button class="btn btn-outline-primary" type="button">Home</button>
+        <button class="btn btn-outline-secondary disabled" type="button">Goals</button>
+        <button class="btn btn-outline-secondary disabled" type="button">Test</button>
+      </form>
+    </nav>
   </section>
   <section id="dashboard"></section>
   <section id="content">
