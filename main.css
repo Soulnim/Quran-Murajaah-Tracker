@@ -4,9 +4,7 @@ body {
 }
 
 #navbar {
- background-color: red;
- height: 100px;
- width: 100%;
+ margin: 0 10px 0 10px;
 }
 
 #dashboard {
@@ -46,4 +44,10 @@ li {
 .col {
  margin: 5px;
  font-size: 18px;
+}
+
+.select-button {
+ border: none;
+ background-color: transparent;
+ width: 100%;
 }
