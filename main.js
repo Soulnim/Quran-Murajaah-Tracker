@@ -218,6 +218,7 @@ function checkJuz(juzName) {
     }
   }
   saveJuzData();
+  getProgress();
   displayJuzu();
 }
 
@@ -287,6 +288,7 @@ function checkSurah(surahName) {
     }
   }
   saveSurahData();
+  getProgress();
   displaySurah();
 }
 
@@ -356,6 +358,7 @@ function checkMaqra(maqraName) {
     }
   }
   saveMaqraData();
+  getProgress();
   displayMaqra();
 }
 
@@ -425,6 +428,7 @@ function checkPage(pageName) {
     }
   }
   savePageData();
+  getProgress();
   displayPage();
 }
 
@@ -509,4 +513,46 @@ function savePageData() {
   localStorage.removeItem("pagedata");
   localStorage.setItem("pagedata", JSON.stringify(pageList));
   pageList = JSON.parse(localStorage.getItem("pagedata"));
+}
+
+function getProgress() {
+  if (!isLoaded) {
+    loadData();
+  }
+  totalJuzTrue = 0;
+  totalSurahTrue = 0;
+  totalMaqraTrue = 0;
+  totalPageTrue = 0;
+  totalJuzAll = 0;
+  totalSurahAll = 0;
+  totalMaqraAll = 0;
+  totalPageAll = 0;
+  for (let juz in juzList) {
+    if (juzList[juz] == 1) {
+      totalJuzTrue++;
+    }
+    totalJuzAll++;
+  }
+  for (let surah in surahList) {
+    if (surahList[surah] == 1) {
+      totalSurahTrue++;
+    }
+    totalSurahAll++;
+  }
+  for (let maqra in maqraList) {
+    if (maqraList[maqra] == 1) {
+      totalMaqraTrue++;
+    }
+    totalMaqraAll++;
+  }
+  for (let page in pageList) {
+    if (pageList[page] == 1) {
+      totalPageTrue++;
+    }
+    totalPageAll++;
+  }
+  document.getElementById("juzprogress").innerHTML = "<h1>" + totalJuzTrue + "/" + totalJuzAll + "</h1>";
+  document.getElementById("surahprogress").innerHTML = "<h1>" + totalSurahTrue + "/" + totalSurahAll + "</h1>";
+  document.getElementById("maqraprogress").innerHTML = "<h1>" + totalMaqraTrue + "/" + totalMaqraAll + "</h1>";
+  document.getElementById("pageprogress").innerHTML = "<h1>" + totalPageTrue + "/" + totalPageAll + "</h1>";
 }
