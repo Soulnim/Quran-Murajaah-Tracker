@@ -150,6 +150,7 @@ let isDisplaySurah = false;
 let isDisplayMaqra = false;
 let isDisplayPage = false;
 let displayDefault = true;
+let isLoaded = false;
 
 //======================== Juzu'
 
@@ -216,6 +217,7 @@ function checkJuz(juzName) {
       }
     }
   }
+  saveJuzData();
   displayJuzu();
 }
 
@@ -284,6 +286,7 @@ function checkSurah(surahName) {
       }
     }
   }
+  saveSurahData();
   displaySurah();
 }
 
@@ -352,6 +355,7 @@ function checkMaqra(maqraName) {
       }
     }
   }
+  saveMaqraData();
   displayMaqra();
 }
 
@@ -420,6 +424,7 @@ function checkPage(pageName) {
       }
     }
   }
+  savePageData();
   displayPage();
 }
 
@@ -448,4 +453,60 @@ function displayFirst() {
     displayJuzu();
     displayDefault = false;
   }
+}
+
+//=========================== localStorage
+
+function loadData() {
+  if (!isLoaded) {
+    // check for juzdata
+    if (localStorage.getItem("juzdata") != null) {
+      juzList = JSON.parse(localStorage.getItem("juzdata"));
+    } else {
+      localStorage.setItem("juzdata", JSON.stringify(juzList));
+    }
+    // check for surahdata
+    if (localStorage.getItem("surahdata") != null) {
+      surahList = JSON.parse(localStorage.getItem("surahdata"));
+    } else {
+      localStorage.setItem("surahdata", JSON.stringify(surahList));
+    }
+    // check for maqradata
+    if (localStorage.getItem("maqradata") != null) {
+      maqraList = JSON.parse(localStorage.getItem("maqradata"));
+    } else {
+      localStorage.setItem("maqradata", JSON.stringify(maqraList));
+    }
+    // check for pagedata
+    if (localStorage.getItem("pagedata") != null) {
+      pageList = JSON.parse(localStorage.getItem("pagedata"));
+    } else {
+      localStorage.setItem("pagedata", JSON.stringify(pageList));
+    }
+    isLoaded = true;
+  }
+}
+
+function saveJuzData() {
+  localStorage.removeItem("juzdata");
+  localStorage.setItem("juzdata", JSON.stringify(juzList));
+  juzList = JSON.parse(localStorage.getItem("juzdata"));
+}
+
+function saveSurahData() {
+  localStorage.removeItem("surahdata");
+  localStorage.setItem("surahdata", JSON.stringify(surahList));
+  surahList = JSON.parse(localStorage.getItem("surahdata"));
+}
+
+function saveMaqraData() {
+  localStorage.removeItem("maqradata");
+  localStorage.setItem("maqradata", JSON.stringify(maqraList));
+  maqraList = JSON.parse(localStorage.getItem("maqradata"));
+}
+
+function savePageData() {
+  localStorage.removeItem("pagedata");
+  localStorage.setItem("pagedata", JSON.stringify(pageList));
+  pageList = JSON.parse(localStorage.getItem("pagedata"));
 }
