@@ -3,24 +3,20 @@ body {
  padding: 0;
 }
 
-#navbar {
+#navbar-section {
  margin: 0 10px 0 10px;
 }
 
 #dashboard {
- background-color: purple;
- height: 100px;
  width: 100%;
+ padding: 20px 0 0 0;
+ margin: auto;
+ text-align: center;
 }
 
 #pillNav2 {
  max-width: 500px;
  margin: auto;
-}
-
-#footer {
- background-color: blue;
- height: 100px;
 }
 
 li {
@@ -50,4 +46,10 @@ li {
  border: none;
  background-color: transparent;
  width: 100%;
+}
+
+.progress-data:hover {
+ color: #0d6efd;
+ cursor: default;
+ transition: 0.2s;
 }
