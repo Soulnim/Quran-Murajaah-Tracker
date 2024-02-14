@@ -556,3 +556,13 @@ function getProgress() {
   document.getElementById("maqraprogress").innerHTML = "<h1>" + totalMaqraTrue + "/" + totalMaqraAll + "</h1>";
   document.getElementById("pageprogress").innerHTML = "<h1>" + totalPageTrue + "/" + totalPageAll + "</h1>";
 }
+
+function reset() {
+  localStorage.removeItem("juzdata");
+  localStorage.removeItem("surahdata");
+  localStorage.removeItem("maqradata");
+  localStorage.removeItem("pagedata");
+
+  window.location.reload()
+  loadData();
+}
