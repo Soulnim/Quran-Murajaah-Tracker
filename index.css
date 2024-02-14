@@ -61,6 +61,12 @@ li {
  }
 }
 
+@media only screen and (max-width: 300px) {
+ #content {
+  max-width: 250px;
+ }
+}
+
 .col {
  margin: 5px;
  font-size: 18px;
