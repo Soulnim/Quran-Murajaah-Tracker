@@ -13,5 +13,10 @@ Quran Murajaah Tracker is built to help keep track of the juzu'/surah/maqra/page
 4. Bootstrap
 5. localStorage
 
+## New things I learned
+1. How to utilize localStorage and its pros and cons
+2. Familiarized myself on how to use onclick()
+3. There are many cool things that can be done easily by using Bootstrap
+
 ## Note
 Please don't laugh on how I list all the juz/surah/maqra/page. It is the most possible way that I can think of 😆😆😆
