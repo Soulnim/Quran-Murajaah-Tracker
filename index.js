@@ -8,7 +8,7 @@ let surahList = {
   "Surah Al-An\'am": 0, "Surah Al-A\'raaf": 0, "Surah Al-Anfal": 0, "Surah At-Taubah": 0, "Surah Yunus": 0,
   "Surah Hud": 0, "Surah Yusuf": 0, "Surah Ar-Ra\'d": 0, "Surah Ibrahim": 0, "Surah Al-Hijr": 0,
   "Surah An-Nahl": 0, "Surah Al-Isra\'": 0, "Surah Al-Kahf": 0, "Surah Maryam": 0, "Surah Ta-Ha": 0,
-  "Surah Al-Anbiya\'": 0, "Surah Al-Mu\'minun": 0, "Surah An-Nur": 0, "Surah Al-Furqan": 0, "Surah Ash-Shuara\'": 0,
+  "Surah Al-Anbiya\'": 0, "Surah Al-Hajj": 0, "Surah Al-Mu\'minun": 0, "Surah An-Nur": 0, "Surah Al-Furqan": 0, "Surah Ash-Shuara\'": 0,
   "Surah An-Naml": 0, "Surah Al-Qasas": 0, "Surah Al-\'Ankabut": 0, "Surah Ar-Rum": 0, "Surah Luqman": 0,
   "Surah As-Sajdah": 0, "Surah Al-Ahzab": 0, "Surah Saba\'": 0, "Surah Fatir": 0, "Surah Ya-Sin": 0,
   "Surah As-Saffat": 0, "Surah Sad": 0, "Surah Az-Zumar": 0, "Surah Ghafir": 0, "Surah Fussilat": 0,
