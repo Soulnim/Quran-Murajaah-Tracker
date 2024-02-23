@@ -1,0 +1,15 @@
+#navbar-section {
+ margin: 0 10px 0 10px;
+}
+
+#goals-list {
+ margin: 20px 20px 20px 20px;
+ text-align: center;
+}
+
+/* Might be changed with media query */
+.goals {
+ height: 120px;
+ margin: 20px;
+ width: 200px;
+}
